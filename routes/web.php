@@ -48,16 +48,35 @@ Route::middleware('auth', 'verified')->group(function () {
 
 });
 
-Route::get('/form', function () {
-    return Inertia::render('SakaiForm');
-});
+Route::middleware('auth', 'verified')->group(function () {
+    $uikitRoutes = [
+        'formlayout' => 'uikit/FormLayout',
+        'input'      => 'uikit/InputDoc',
+        'button'     => 'uikit/ButtonDoc',
+        'table'      => 'uikit/TableDoc',
+        'list'       => 'uikit/ListDoc',
+        'tree'       => 'uikit/TreeDoc',
+        'panel'      => 'uikit/PanelsDoc',
+        'overlay'    => 'uikit/OverlayDoc',
+        'media'      => 'uikit/MediaDoc',
+        'menu'       => 'uikit/MenuDoc',
+        'message'    => 'uikit/MessagesDoc',
+        'file'       => 'uikit/FileDoc',
+        'charts'     => 'uikit/ChartDoc',
+        'timeline'   => 'uikit/TimelineDoc',
+        'misc'       => 'uikit/MiscDoc',
+    ];
 
-Route::get('/button', function () {
-    return Inertia::render('SakaiButton');
-});
+    foreach ($uikitRoutes as $segment => $view) {
+        Route::get("/uikit/{$segment}", fn () => Inertia::render('SakaiView', ['view' => $view]))->name("uikit.{$segment}");
+    }
 
-Route::get('/list', function () {
-    return Inertia::render('SakaiList');
+    Route::get('/documentation', fn () => Inertia::render('SakaiView', ['view' => 'pages/Documentation']))->name('documentation');
+
+    Route::get('/landing', fn () => Inertia::render('SakaiView', ['view' => 'pages/Landing']))->name('landing');
+
+    Route::get('/pages/empty', fn () => Inertia::render('SakaiView', ['view' => 'pages/Empty']))->name('pages.empty');
+    Route::get('/pages/crud',  fn () => Inertia::render('SakaiView', ['view' => 'pages/Crud']))->name('pages.crud');
 });
 
 // Route::get('/', function () {
