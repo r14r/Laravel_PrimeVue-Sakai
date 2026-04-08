@@ -9,12 +9,12 @@ const props = defineProps({
     },
 });
 
-const sakaviews = import.meta.glob('../sakai/views/**/*.vue');
+const sakaiViews = import.meta.glob('../sakai/views/**/*.vue');
 
 const ViewComponent = computed(() => {
     const key = `../sakai/views/${props.view}.vue`;
-    if (sakaviews[key]) {
-        return defineAsyncComponent(sakaviews[key]);
+    if (sakaiViews[key]) {
+        return defineAsyncComponent(sakaiViews[key]);
     }
     return null;
 });
@@ -23,5 +23,8 @@ const ViewComponent = computed(() => {
 <template>
     <AppLayout>
         <component :is="ViewComponent" v-if="ViewComponent" />
+        <div v-else class="card">
+            <p class="text-muted-color">The requested view could not be found.</p>
+        </div>
     </AppLayout>
 </template>
