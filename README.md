@@ -4,13 +4,7 @@ Built using using laravel 10, inertia, vue 3 and Sakai admin template.
 
 # Screenshots
 <p align="center">  
-  <img alt="Login" src="https://i.postimg.cc/QCCcQ9gX/login.png" width="45%">&nbsp;
-  <img alt="Dashboard" src="https://i.postimg.cc/wMr4ZBD5/dashboard.png" width="45%">&nbsp;
-  <img alt="User" src="https://i.postimg.cc/bY56zs2k/user.png" width="45%">
-  <img alt="Add User" src="https://i.postimg.cc/7YTKbwgc/add-user.png" width="45%">&nbsp;
-  <img alt="Add User" src="https://i.postimg.cc/vDRL5xWK/delete-user.png" width="45%">&nbsp; 
-  <img alt="Role" src="https://i.postimg.cc/tgRfs8Rx/permission.png" width="45%">
-  <img alt="Permission" src="https://i.postimg.cc/VNNGfM49/list-permission.png" width="45%">
+  <img alt="Dashboard" src="doc/Dashboard-Laravel-Sakai.png" width="45%">&nbsp;
 </p>
 
 # Features
