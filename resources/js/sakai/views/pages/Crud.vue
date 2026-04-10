@@ -1,6 +1,6 @@
 <script setup>
 import { ProductService } from '@/sakai/service/ProductService';
-import { FilterMatchMode } from 'primevue/api';
+import { FilterMatchMode } from '@primevue/core/api';
 import { useToast } from 'primevue/usetoast';
 import { onMounted, ref } from 'vue';
 
