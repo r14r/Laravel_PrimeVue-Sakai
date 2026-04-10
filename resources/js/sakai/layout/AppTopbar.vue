@@ -33,7 +33,7 @@ const { onMenuToggle, toggleDarkMode, isDarkTheme } = useLayout();
                     </g>
                 </svg>
 
-                <span>SAKAI</span>
+                <span>Laravel SAKAI</span>
             </nav-link>
         </div>
 
