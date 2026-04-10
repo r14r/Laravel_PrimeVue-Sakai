@@ -6,6 +6,8 @@
         "build": "vite build"
     },
     "dependencies": {
+        "@primeuix/themes": "^2.0.3",
+        "@primevue/core": "^4.5.5",
         "@primevue/themes": "^4.5.4",
         "chart.js": "4.5.1",
         "lodash": "^4.18.1",
